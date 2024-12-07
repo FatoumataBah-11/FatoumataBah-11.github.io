@@ -71,45 +71,30 @@ main {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Family Pictures Section */
-.family-pictures {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 15px;
-    margin-top: 20px;
-}
-
-/* Family Member Style */
-.family-member {
-    text-align: center;
-    padding: 10px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.family-member:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Add container for the image to better control positioning */
-.family-member img {
+/* Table Styles */
+.project-table {
     width: 100%;
-    height: auto; /* Ensures the image maintains its aspect ratio */
-    max-height: 300px; /* Limit the height to keep the images in proportion */
-    object-fit: cover;
-    object-position: center center; /* Centers image within its container */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: block;
-    margin: 0 auto;
+    border-collapse: collapse;
+    margin: 20px auto;
 }
 
-/* Ensuring the first image fits well within the container */
-.family-pictures img:first-child {
-    object-position: center center; /* Centers the first image */
+.project-table th,
+.project-table td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.project-table th {
+    background-color: #ff99c8;
+    color: white;
+}
+
+/* Embedded Media Section */
+iframe {
+    display: block;
+    margin: 20px auto;
+    border: none;
 }
 
 /* Footer */
