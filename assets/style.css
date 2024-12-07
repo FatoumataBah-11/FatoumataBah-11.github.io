@@ -74,17 +74,42 @@ main {
 /* Family Pictures Section */
 .family-pictures {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
     margin-top: 20px;
 }
 
-.family-pictures img {
+/* Family Member Style */
+.family-member {
+    text-align: center;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.family-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Add container for the image to better control positioning */
+.family-member img {
     width: 100%;
-    height: auto;
+    height: auto; /* Ensures the image maintains its aspect ratio */
+    max-height: 300px; /* Limit the height to keep the images in proportion */
+    object-fit: cover;
+    object-position: center center; /* Centers image within its container */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Ensuring the first image fits well within the container */
+.family-pictures img:first-child {
+    object-position: center center; /* Centers the first image */
 }
 
 /* Footer */
